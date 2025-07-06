@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSIT Student Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="fixed w-full bg-slate-900/90 backdrop-blur-sm z-50 border-b border-slate-800">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold gradient-text">DevStudent</div>
+            </div>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link active text-white hover:text-blue-400 transition">Home</a>
+                <a href="#about" class="nav-link text-slate-300 hover:text-blue-400 transition">About</a>
+                <a href="#hobbies" class="nav-link text-slate-300 hover:text-blue-400 transition">Hobbies</a>
+                <a href="#education" class="nav-link text-slate-300 hover:text-blue-400 transition">Education</a>
+                <a href="#skills" class="nav-link text-slate-300 hover:text-blue-400 transition">Skills</a>
+                <a href="#projects" class="nav-link text-slate-300 hover:text-blue-400 transition">Projects</a>
+                <a href="#contact" class="nav-link text-slate-300 hover:text-blue-400 transition">Contact</a>
+            </div>
+
+            <!-- Mobile Navigation Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="text-white hover:text-blue-400 transition py-2">Home</a>
+                <a href="#about" class="text-slate-300 hover:text-blue-400 transition py-2">About</a>
+                <a href="#hobbies" class="text-slate-300 hover:text-blue-400 transition py-2">Hobbies</a>
+                <a href="#education" class="text-slate-300 hover:text-blue-400 transition py-2">Education</a>
+                <a href="#skills" class="text-slate-300 hover:text-blue-400 transition py-2">Skills</a>
+                <a href="#projects" class="text-slate-300 hover:text-blue-400 transition py-2">Projects</a>
+                <a href="#contact" class="text-slate-300 hover:text-blue-400 transition py-2">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center pt-16">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <p class="text-blue-500 font-medium mb-2">Hello, I'm a</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                    <span class="text-white">BSIT</span>
+                    <div class="typing-container inline-block">
+                        <span id="typing-text" class="gradient-text typing-text"></span>
+                    </div>
+                </h1>
+                <p class="text-slate-400 text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                    First-year student passionate about technology and software development. 
+                    Exploring the world of IT and building my skills one project at a time.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:opacity-90 transition">
+                        Contact Me
+                    </a>
+                    <a href="#projects" class="px-6 py-3 border border-slate-600 text-white font-medium rounded-lg hover:bg-slate-800 transition">
+                        View Projects
+                    </a>
+                </div>
+                    <div class="flex mt-8 space-x-4 justify-center md:justify-start">
+                        <a href="https://github.com/EdisonPineda" target="_blank" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ed_eskt" target="_blank" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                        <a href="https://www.facebook.com/share/1Ap5NasS3c/" target="_blank" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                        <a href="https://www.instagram.com/ed_pineds" target="_blank" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                    </a>
+              </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 blur-2xl opacity-20 absolute"></div>
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-blue-500/30 flex items-center justify-center relative overflow-hidden">
+                       <img src="2.png" alt="Profile Picture" class="w-full h-full object-cover rounded-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-slate-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-2">About <span class="gradient-text">Me</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row gap-10">
+            <div class="md:w-1/2">
+                <h3 class="text-2xl font-semibold mb-4">BSIT Student</h3>
+                <p class="text-slate-400 mb-6">
+                    I'm a first-year Bachelor of Science in Information Technology student with a passion for learning and exploring new technologies. 
+                    My journey in the world of IT has just begun, and I'm excited about the possibilities ahead.
+                </p>
+                <p class="text-slate-400 mb-6">
+                    Currently focusing on building a strong foundation in programming, web development, and computer systems. 
+                    I enjoy solving problems and creating projects that challenge my skills and knowledge.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-slate-300"><span class="text-blue-500">Name:</span> Edison Eljae F. Pineda</p>
+                    </div>
+                    <div>
+                        <p class="text-slate-300"><span class="text-blue-500">Email:</span> pinedaedisoneljae@gmail.com</p>
+                    </div>
+                    <div>
+                        <p class="text-slate-300"><span class="text-blue-500">Year:</span> First Year</p>
+                    </div>
+                    <div>
+                        <p class="text-slate-300"><span class="text-blue-500">Course:</span> BSIT</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2">
+                <h3 class="text-2xl font-semibold mb-4">Personal Info</h3>
+                <div class="space-y-6">
+                    <div class="card p-6 rounded-lg">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Date of Birth</h4>
+                                <p class="text-slate-400">September 04, 2007</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card p-6 rounded-lg">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Address</h4>
+                                <p class="text-slate-400">Lamesa St., Ugong, Valenzuela City</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card p-6 rounded-lg">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Languages</h4>
+                                <p class="text-slate-400">Filipino, English</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hobbies Section -->
+<section id="hobbies" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-2">My <span class="gradient-text">Hobbies</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+            <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
+                When I'm not coding or studying, here's what I enjoy doing in my free time.
+            </p>
+        </div>
+        
+        <div class="custom-slider hobbies-slider">
+            <div class="slider-container">
+                <!-- Drawing Hobby -->
+                <div class="slider-item">
+                    <div class="card p-8 rounded-lg max-w-3xl mx-auto">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-paint-brush hobby-icon"></i>
+                            <h3 class="text-2xl font-semibold">Drawing</h3>
+                            <p class="text-blue-500">Artistic Expression</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <p class="text-slate-400">
+                                I've been drawing since childhood, starting with simple pencil sketches and gradually exploring different mediums and techniques. Drawing helps me relax and express ideas.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-slate-800/50 p-4 rounded-lg">
+                                    <h4 class="font-medium mb-3 text-blue-400">Art Techniques</h4>
+                                    <div class="space-y-2">
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            <span>Coloring</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-paint-brush"></i>
+                                            <span>Watercolor painting</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            <span>Sketching</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-slate-800/50 p-4 rounded-lg">
+                                    <h4 class="font-medium mb-3 text-blue-400">Art Styles</h4>
+                                    <div class="space-y-2">
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-user"></i>
+                                            <span>Anime characters</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-portrait"></i>
+                                            <span>Portraits</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-900/20 p-4 rounded-lg border border-blue-900/30">
+                                <p class="text-slate-400">
+                                   I'm too lazy to draw now… it’s exhausting :D
+                                   But I still enjoy the process of creating art.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Online Gaming Hobby -->
+                <div class="slider-item">
+                    <div class="card p-8 rounded-lg max-w-3xl mx-auto">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-gamepad hobby-icon"></i>
+                            <h3 class="text-2xl font-semibold">Online Gaming</h3>
+                            <p class="text-blue-500">Strategic Entertainment</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <p class="text-slate-400">
+                                I've been gaming since I was young. 
+
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-slate-800/50 p-4 rounded-lg">
+                                    <h4 class="font-medium mb-3 text-blue-400">Favorite Games</h4>
+                                    <div class="space-y-2">
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-cube text-green-400"></i>
+                                            <span>Minecraft (Bedrock)</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-fire text-pink-400"></i>
+                                            <span>Genshin Impact</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <span>Mobile Legends</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-slate-800/50 p-4 rounded-lg">
+                                    <div class="space-y-2">
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-shield-alt text-yellow-400"></i>
+                                            <span>Clash of Clans</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-map-marker-alt text-red-400"></i>
+                                            <span>Pokemon Go</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <span>Roblox</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-900/20 p-4 rounded-lg border border-blue-900/30">
+                                <p class="text-slate-400">
+                                    Gaming is not just a hobby for me; it's a way to unwind and connect with friends. 
+                                    I enjoy the strategic elements of games and the creativity they allow.
+                                    But kapag sumobra atay na.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DIY Electronics Hobby -->
+                <div class="slider-item">
+                    <div class="card p-8 rounded-lg max-w-3xl mx-auto">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-microchip hobby-icon"></i>
+                            <h3 class="text-2xl font-semibold">DIY Electronics</h3>
+                            <p class="text-blue-500">Hardware Exploration</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <p class="text-slate-400">
+                                When I was a kid, I used to play with anything broken that had a DC motor inside. One time, I built a DIY car and tried plugging it directly into an outlet — and boomb, it short-circuited!
+                                That’s when I first learned that not everything should be plugged in carelessly. But even after that, I didn’t stop — in fact, it made me even more curious about how electronics really work
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-slate-800/50 p-4 rounded-lg">
+                                    <h4 class="font-medium mb-3 text-blue-400">Platforms & Tools</h4>
+                                    <div class="space-y-2">
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-project-diagram text-indigo-400"></i>
+                                            <span>Breadboard</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-lightbulb"></i>
+                                            <span>Led</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-cog text-orange-400"></i>
+                                            <span>Dc Motor</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-slate-800/50 p-4 rounded-lg">
+                                    <div class="space-y-2">
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-microchip text-yellow-400"></i>
+                                            <span>Internal Components of a Smartphone</span>
+                                        </div>
+                                        <div class="hobby-feature">
+                                            <i class="fas fa-helicopter text-green-400"></i>
+                                            <span>Drone</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-blue-900/20 p-4 rounded-lg border border-blue-900/30">
+                                <p class="text-slate-400">
+                                    Sige magkutingting. Diy Diy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Navigation -->
+            <div class="slider-nav prev hobbies-prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="slider-nav next hobbies-next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            
+            <!-- Slider Dots -->
+            <div class="slider-dots hobbies-dots">
+                <div class="slider-dot active" data-index="0"></div>
+                <div class="slider-dot" data-index="1"></div>
+                <div class="slider-dot" data-index="2"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="py-20 bg-slate-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-2">My <span class="gradient-text">Education</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+            <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
+                My academic journey from kindergarten to college.
+            </p>
+        </div>
+        
+        <div class="custom-slider education-slider">
+            <div class="slider-container">
+                <!-- Kindergarten -->
+                <div class="slider-item">
+                    <div class="card p-8 rounded-lg max-w-3xl mx-auto">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-child education-icon"></i>
+                            <h3 class="text-2xl font-semibold">Kindergarten</h3>
+                            <p class="text-blue-500">2012 - 2013</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-school"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Little Stars Kindergarten</h4>
+                                    <p class="text-slate-400">Early childhood education focusing on basic skills and social development.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Achievements</h4>
+                                    <p class="text-slate-400">Perfect Attendance Award</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Activities</h4>
+                                    <p class="text-slate-400">Arts and crafts, basic counting, social play</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Elementary School -->
+                <div class="slider-item">
+                    <div class="card p-8 rounded-lg max-w-3xl mx-auto">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-school education-icon"></i>
+                            <h3 class="text-2xl font-semibold">Elementary School</h3>
+                            <p class="text-blue-500">2013 - 2019</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-school"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Silvestre Lazaro Elementary School</h4>
+                                    <p class="text-slate-400">Primary education with focus on core subjects and extracurricular activities.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Achievements</h4>
+                                    <p class="text-slate-400">Perfect Attendance</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Activities</h4>
+                                    <p class="text-slate-400">dikona alam</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Junior High School -->
+                <div class="slider-item">
+                    <div class="card p-8 rounded-lg max-w-3xl mx-auto">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-graduation-cap education-icon"></i>
+                            <h3 class="text-2xl font-semibold">Junior High School</h3>
+                            <p class="text-blue-500">2019 - 2022</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-school"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Sitero Francisco Memorial National High School</h4>
+                                    <p class="text-slate-400">Secondary education with introduction to specialized subjects.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Achievements</h4>
+                                    <p class="text-slate-400">Best in Attendance</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Activities</h4>
+                                    <p class="text-slate-400">EWAN</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Senior High School -->
+                <div class="slider-item">
+                    <div class="card p-8 rounded-lg max-w-3xl mx-auto">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-user-graduate education-icon"></i>
+                            <h3 class="text-2xl font-semibold">Senior High School - ICT</h3>
+                            <p class="text-blue-500">2022 - 2025</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-school"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Our Lady of Lourdes Collage</h4>
+                                    <p class="text-slate-400">ICT track focusing on Information, Communication, Technology.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Achievements</h4>
+                                    <p class="text-slate-400">With Honors</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Activities</h4>
+                                    <p class="text-slate-400">Work Immersion, Research Project</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- College - BSIT -->
+                <div class="slider-item">
+                    <div class="card p-8 rounded-lg max-w-3xl mx-auto">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-university education-icon"></i>
+                            <h3 class="text-2xl font-semibold">Bachelor of Science in Information Technology</h3>
+                            <p class="text-blue-500">2025 - Present</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Our Lady of Lourdes Collage</h4>
+                                    <p class="text-slate-400">First year BSIT student.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Current Courses</h4>
+                                    <p class="text-slate-400">achelor of Science in Information Technology</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Activities</h4>
+                                    <p class="text-slate-400">WALA PA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Navigation -->
+            <div class="slider-nav prev education-prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="slider-nav next education-next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            
+            <!-- Slider Dots -->
+            <div class="slider-dots education-dots">
+                <div class="slider-dot active" data-index="0"></div>
+                <div class="slider-dot" data-index="1"></div>
+                <div class="slider-dot" data-index="2"></div>
+                <div class="slider-dot" data-index="3"></div>
+                <div class="slider-dot" data-index="4"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-2">My <span class="gradient-text">Skills</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>HTML & CSS</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>JavaScript</span>
+                            <span>2%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 2%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>PHP</span>
+                            <span>6%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 6%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Python</span>
+                            <span>0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Data Base</span>
+                            <span>1%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 1%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-6">Soft Skills</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Problem Solving</span>
+                            <span>10%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 10%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Teamwork</span>
+                            <span>1%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 1%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Communication</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Time Management</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Adaptability</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-slate-900">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-2">My <span class="gradient-text">Projects</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+            <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
+                These are some projects I'm currently working on..
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="card rounded-lg overflow-hidden">
+                <div class="h-48 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
+                    <i class="fas fa-globe text-5xl text-white"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Personal Website</h3>
+                    <p class="text-slate-400 mb-4">
+                        A responsive personal website built using HTML, CSS, and JavaScript.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">HTML</span>
+                        <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">CSS</span>
+                        <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">JavaScript</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-blue-500 hover:text-blue-400 transition">View Project</a>
+                        <a href="#" class="text-blue-500 hover:text-blue-400 transition">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="card rounded-lg overflow-hidden">
+                <div class="h-48 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
+                    <i class="fas fa-globe text-5xl text-white"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Website application</h3>
+                    <p class="text-slate-400 mb-4">
+                        A simple website application with basic designs.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">HTML</span>
+                        <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">CSS</span>
+                        <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">JavaScript</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-blue-500 hover:text-blue-400 transition">View Project</a>
+                        <a href="#" class="text-blue-500 hover:text-blue-400 transition">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="card rounded-lg overflow-hidden">
+                <div class="h-48 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
+                    <i class="fas fa-tasks text-5xl text-white"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">To-Do List App</h3>
+                    <p class="text-slate-400 mb-4">
+                        A task management application to keep track of daily activities.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">PHP</span>
+                        <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">CSS,JS</span>
+                        <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full">SQL</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-blue-500 hover:text-blue-400 transition">View Project</a>
+                        <a href="#" class="text-blue-500 hover:text-blue-400 transition">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-2">Contact <span class="gradient-text">Me</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
+            <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
+                Feel free to reach out to me for any questions or opportunities.
+            </p>
+        </div>
+        
+        <div class="flex flex-col md:flex-row gap-10">
+            <div class="md:w-1/2">
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-6">Get In Touch</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-slate-400">pinedaedisoneljae@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p class="text-slate-400">09940994615</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-slate-400">City, Country</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/30 p-3 rounded-lg text-blue-500">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">University</h4>
+                                <p class="text-slate-400">University Name</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-medium mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-900/30 p-3 rounded-lg text-blue-500 hover:bg-blue-800/40 transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="bg-blue-900/30 p-3 rounded-lg text-blue-500 hover:bg-blue-800/40 transition">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="bg-blue-900/30 p-3 rounded-lg text-blue-500 hover:bg-blue-800/40 transition">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="bg-blue-900/30 p-3 rounded-lg text-blue-500 hover:bg-blue-800/40 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2">
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-6">Send Me a Message</h3>
+                    
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-300 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-300 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-300 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:opacity-90 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 border-t border-slate-800 bg-slate-900">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <div class="text-xl font-bold gradient-text">DevStudent</div>
+            </div>
+            
+            <div class="text-slate-400 text-center md:text-right">
+                <p>&copy; 2023 BSIT Student Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
+ 
+

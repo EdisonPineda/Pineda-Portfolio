@@ -1,0 +1,196 @@
+/* Edison Eljae Pineda's Portfolio Styles */
+/* This file contains the styles for the portfolio website, including layout, typography, and animations. */
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ✅ Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ✅ Offset scroll so sections aren't hidden by fixed navbar */
+section {
+    scroll-margin-top: 100px; /* Adjust based on your nav height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.active::after {
+    width: 100%;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+}
+
+.skill-bar {
+    height: 8px;
+    background: rgba(100, 116, 139, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    border-radius: 4px;
+}
+
+/* Enhanced Typing Animation Styles */
+.typing-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.typing-text {
+    position: relative;
+    white-space: nowrap;
+}
+
+.typing-text::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 0px;
+    height: 100%;
+    background-color: #8b5cf6;
+    animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Slider Styles (for both Education and Hobbies) */
+.custom-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    min-width: 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slider-item.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.slider-nav:hover {
+    background: rgba(59, 130, 246, 0.3);
+}
+
+.slider-nav.prev {
+    left: 10px;
+}
+
+.slider-nav.next {
+    right: 10px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slider-dots {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(100, 116, 139, 0.3);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dots.active {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    transform: scale(1.2);
+}
+
+.education-icon,
+.hobby-icon {
+    font-size: 3rem;
+    margin: 1rem;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    background-clip: text;
+    color: transparent;
+}
+
+/* Hobbies Section Styles */
+.hobby-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.75rem;
+}
+
+.hobby-feature i {
+    color: #3b82f6;
+    margin-right: 0.75rem;
+}
