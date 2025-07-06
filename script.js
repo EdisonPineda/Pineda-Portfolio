@@ -55,7 +55,7 @@
     
     // Enhanced Typing Animation
     const typingText = document.getElementById('typing-text');
-    const texts = [" Student", " Developer", " Designer", " Innovator", " Programmer"];
+    const texts = [" Student", " Developer", " Designer", " Programmer"];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
